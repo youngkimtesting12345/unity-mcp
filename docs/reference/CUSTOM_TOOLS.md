@@ -1,7 +1,6 @@
-# XSS Test 4
-<div tabindex='1' onfocus='alert(1)' autofocus>Autofocus</div>div>
-<div onmouseenter='alert(2)'>Hover me</div>div>
-<style>body { background: url('javascript:alert(3)'); }</style>
-<meta http-equiv='refresh' content='0;url=javascript:alert(4)'>
-<iframe srcdoc='&lt;script&gt;alert(5)&lt;/script&gt;'></iframe>iframe>
-</style>
+# XSS Test 5
+<details/open/ontoggle=alert(1)>Details</details>
+<a title='" onmouseover=alert(1) "'>Link</a>
+<div data-custom='" onmouseover=alert(1) "'>Data</div>div>
+<img src="x" title="onerror=alert(1)">
+![image](https://example.com/"onerror=alert(1))
