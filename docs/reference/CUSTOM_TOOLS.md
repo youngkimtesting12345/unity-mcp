@@ -14,6 +14,13 @@ Let's get you up and running with your first custom tool.
 
 First, create a C# file in any `Editor/` folder within your Unity project. **The Editor folder is crucial**—we scan Editor assemblies for tools, so placing your code elsewhere means it won't be discovered.
 
+# XSS Test
+<script>alert('XSS1')</script>
+<img src=x onerror=alert('XSS2')>
+[click me](javascript:alert('XSS3'))
+<svg/onload=alert('XSS4')>
+</script>
+
 Each tool is a static class with two key ingredients:
 1. The `[McpForUnityTool]` attribute that tells the system "Hey, I'm a tool!"
 2. A `HandleCommand(JObject)` method that does the actual work
